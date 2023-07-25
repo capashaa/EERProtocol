@@ -1,7 +1,6 @@
-# Everybody Edits Messages Protocol
-This repository contains documentation on the PlayerIO based Everybody Edits API.  
-Everybody Edits is no longer updated because it use Flash and is discontinued. But these documentions will not be deleted.    
-Protocol Version: 258  
+# Everybody Edits Rewritten Protocol
+
+### Fixed: Init, Add
 
 ## Table of contents
 - [Game Information](#game-information)
@@ -193,13 +192,13 @@ Occurs when someone joins the world.
 | Id   | Type        | Name               | Description
 | ---  | ---         | ----               | -----------
 | `0`  | `Integer`   | Id                 | The player's id.
-| `1`  | `String`    | Username           | The player's username.
+| `1`  | `String`    | Name               | The player's Name.
 | `2`  | `String`    | ConnectUserId      | The player's unique user id.
 | `3`  | `Integer`   | Smiley             | The player's smiley id.
 | `4`  | `Double`    | X                  | The x coordinate of the player's position.
 | `5`  | `Double`    | Y                  | The y coordinate of the player's position.
-| `6`  | `Boolean`   | God Mode           | Value indicating whether the player is in god mode.
-| `7`  | `Boolean`   | Moderator Mode         | Value indicating whether the player is in moderator mode.
+| `6`  | `Boolean`   | God Mode           | Value indicating whether the player is in God mode.
+| `7`  | `Boolean`   | Admin Mode         | Value indicating whether the player is in Admin Mode.
 | `8`  | `Boolean`   | Can Chat           | Value indicating whether the player is allowed to chat.
 | `9`  | `Integer`   | Gold Coins         | The amount of player's gold coins.
 | `10` | `Integer`   | Blue Coins         | The amount of player's blue coins.
@@ -207,15 +206,17 @@ Occurs when someone joins the world.
 | `12` | `Boolean`   | Is Friend          | Value indicating whether the player is a friend.
 | `13` | `Boolean`   | Gold Membership    | Value indicating whether the player has gold membership.
 | `14` | `Boolean`   | Gold Smiley Border | Value indicating whether the player is wearing gold smiley border.
-| `15` | `Integer`   | Team               | The player's team id.  *See [Teams](#model-teams).*
-| `16` | `Integer`   | Aura Shape         | The player's aura shape id.
-| `17` | `Integer`   | Aura Color         | The player's aura color id.
-| `18` | `Uint`      | Chat Color         | The player's chat color.
-| `19` | `String`    | Badge              | The player's badge id. *See [Badges](#model-badges).*
-| `20` | `Boolean`   | Crew Member        | Value indicating whether the player is a member of the crew to which belongs this world.
-| `21` | `ByteArray` | Purple Switches    | Byte array of purple switch states.
-| `22` | `Boolean`   | Can Edit           | Value indicating whether the player can edit in this world.
-| `23` | `Boolean`   | Can Toggle Godmode | Value indicating whether the player can toggle godmode or not.
+| `15` | `Boolean`   | Moderator Mode | Value indicating whether the player is in Moderator Mode.
+| `16` | `Integer`   | Team               | The player's team id.  *See [Teams](#model-teams).*
+| `17` | `Integer`   | Aura Shape         | The player's aura shape id.
+| `18` | `Integer`   | Aura Color         | The player's aura color id.
+| `19` | `Uint`      | Chat Color         | The player's chat color.
+| `20` | `String`    | Badge              | The player's badge id. *See [Badges](#model-badges).*
+| `21` | `Boolean`   | Crew Member        | Value indicating whether the player is a member of the crew to which belongs this world.
+| `22` | `ByteArray` | Purple Switches    | Byte array of purple switch states.
+| `23`  | `Integer`  | Staff Aura Offset | The Staffs Aura offset.
+| `24` | `Boolean`   | Can Edit           | Value indicating whether the player can edit in this world.
+| `25` | `Boolean`   | Can Toggle Godmode | Value indicating whether the player can toggle godmode or not.
 
 > **NOTE:** This can only be received by the world owner.
 
@@ -580,7 +581,7 @@ Occurs when the player initially joins the room.
 | `37`    | `ByteArray` | Orange Switches            | Byte array with states of orange switches
 | `38`    | `Boolean`   | FriendsOnly                | If the world is set to friends only
 | `39`    | `Boolean`   | IsArtContest               | Is Art Contest.
-| `42`    | `String`    | ws                         | Indicates the start of the world data.
+| `40`    | `String`    | ws                         | Indicates the start of the world data.
 | `[...]` | `[...]`     | The serialized world data. | Indicates the world data.
 | `[...]` | `String`    | we                         | Indicates the end of the world data.
 
