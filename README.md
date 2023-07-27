@@ -154,8 +154,8 @@ ___
 
 # <a id="game-information">Game Information</a>
 ```
-GameID = everybody-edits-su9rn58o40itdbnw69plyw
-Version = 256
+GameID = everybody-edits-v226-5ugofmmni06qbc11k5tqq
+Version = 251
 ```
 Since I don't update this protocol not so often.  
 Please report new changes to me with [this protocol tool](https://github.com/capasha/protocoltool/releases/tag/1.0).  
