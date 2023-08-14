@@ -1,6 +1,9 @@
 # Everybody Edits Rewritten Protocol
 
-### Fixed: Init, Add
+### Changelog
+**Fixed:** Missing values for Add and Init.  
+**Fixed:** Game Information to show correct GameID.  
+**Added:** editblocktouch.
 
 ## Table of contents
 - [Game Information](#game-information)
@@ -102,6 +105,7 @@
   - [clear](#sm-clear)
   - [death](#sm-death)
   - [diamondtouch](#sm-diamondtouch)
+  - [editblocktouch](#sm-editblocktouch)
   - [effect](#sm-effect)
   - [favorite](#sm-favorite)
   - [god](#sm-god)
@@ -1093,6 +1097,14 @@ Sent to touch a diamond.
 | --- | ----   | ---- | -----------
 | `0` | `UInt` | X    | The x coordinate of the diamond's position.
 | `1` | `UInt` | Y    | The y coordinate of the diamond's position.
+
+### <a id="sm-editblocktouch">"editblocktouch"</a>
+Sent to enable edit from editblock.
+
+| Id  | Type   | Name | Description
+| --- | ----   | ---- | -----------
+| `0` | `UInt` | X    | The x coordinate of the editblock's position.
+| `1` | `UInt` | Y    | The y coordinate of the editblock's position.
 
 ### <a id="sm-effect">"effect"</a>
 Sent to activate or deactivate an effect.
